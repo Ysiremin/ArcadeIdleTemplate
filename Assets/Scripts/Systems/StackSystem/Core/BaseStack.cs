@@ -14,7 +14,7 @@ public class BaseStack : MonoBehaviour
     public bool IsFull => items.Count >= capacity;
     public bool HasItems => items.Count > 0;
 
-    public UnityEvent onItemAdded;
+    //public UnityEvent onItemAdded;
     
     public virtual bool AddItem(StackableItem stackableItem)
     {
@@ -35,8 +35,9 @@ public class BaseStack : MonoBehaviour
             stackableItem.transform.localPosition = targetPos;
             stackableItem.transform.localRotation = Quaternion.identity;
         }
+        
+        //onItemAdded?.Invoke();
 
-        onItemAdded?.Invoke();
         return true;
     }
 

@@ -64,11 +64,11 @@ public class BaseItemCarrier : MonoBehaviour
                     break;
                 case StackAreaType.InputOnly:
                     GiveItems();
-                    otherStack.onItemAdded.AddListener(GiveItems);
+                    //otherStack.onItemAdded.AddListener(GiveItems); // Event için çalışacak method ayırlacak.
                     break;
                 case StackAreaType.OutputOnly:
                     GetItems();
-                    otherStack.onItemAdded.AddListener(GetItems);
+                    //otherStack.onItemAdded.AddListener(GetItems);
                     break;
             }
         }
@@ -85,10 +85,10 @@ public class BaseItemCarrier : MonoBehaviour
                     // Both
                     break;
                 case StackAreaType.InputOnly:
-                    otherStack.onItemAdded.RemoveListener(GiveItems);
+                    //otherStack.onItemAdded.RemoveListener(GiveItems);
                     break;
                 case StackAreaType.OutputOnly:
-                    otherStack.onItemAdded.RemoveListener(GetItems);
+                    //otherStack.onItemAdded.RemoveListener(GetItems);
                     break;
             }
 
